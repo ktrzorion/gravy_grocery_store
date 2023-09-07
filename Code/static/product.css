@@ -1,0 +1,58 @@
+/* --NAVBAR Styling-- */
+
+a img{
+  height: 50px;
+  width: 50px;
+}
+
+.navbar{
+  background-color: #fff;
+}
+
+.link{
+  color: #333;
+  text-decoration: none;
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav-right{
+  position: absolute;
+  right: 20px;
+}
+
+/* ---------------- */
+
+.form-container {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.add_product{
+  margin-top: 25px;
+}
+
+h1 {
+  font-size: 48px;
+  color: #333;
+}
+
+.button {
+  margin-bottom: 50px;
+}

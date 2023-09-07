@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en" class="h-100" data-bs-theme="auto">
+
+<head>
+  <title>Gravy - Online Grocery Booking Site</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link href="{{url_for('static', filename='index.css')}}" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg" style="background-color: rgb(0, 0, 0);">
+    <a class="navbar-brand" href="{{url_for('home')}}"><img src="/static/Logo/red-nbg.png" alt="Logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="link" href="{{url_for('home')}}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="link" href="mailto:ktrzorion@gmail.com">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="link" href="{{url_for('about_us')}}">About Us</a>
+        </li>
+      </ul>
+    </div>
+    <form action="{{url_for('logout')}}">
+    <button class="btn btn-warning" onclick="window.location.href='{{url_for('user_login')}}' ">LOGOUT</button>
+  </form>
+  </nav>
+  <!-- Navbar Ends -->
+
+  <div class="custom-container">
+    <main class="px-3">
+      <h1>Gravy</h1>
+      <p class="lead">"YOUR ORDER IS ON ITS WAY! 😊"</p>
+      <form action="{{url_for('logout')}}">
+      <button class="btn btn-dark" onclick="window.location.href='{{url_for('user_login')}}' ">LOGOUT</button>
+    </form>
+    </main>
+  </div>
+
+  <footer class="text-white-50">
+    <p>&copy; 2022-2023 &nbsp;<a href="{{url_for('user_register')}}" class="text-white">REGISTER</a>
+      , Developed by <a href="https://www.linkedin.com/in/priyanshuktr/" class="text-white">OWNER INFO.</a>.</p>
+  </footer>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

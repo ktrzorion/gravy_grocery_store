@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Gravy - Admin Login</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container-sm">
+        <h2 class="text-center mt-4">Admin Login</h2>
+        <form method="POST" action="" class="mt-4">
+            {{ form.hidden_tag() }}
+            
+            <div class="form-group">
+                <label for="username">Username</label>
+                {{ form.username(class="form-control", placeholder="Enter Your Username") }}
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                {{ form.password(class="form-control", placeholder="Enter Your Password") }}
+            </div>
+            
+            <div class="text-center">
+                {{ form.submit(class="btn btn-primary") }}
+            </div>
+        </form>
+        
+        <div class="link text-center mt-3">
+            <p> **Only for demo purpose**  New registration? <a href="{{ url_for('admin_register') }}">Register here</a></p>
+        </div>
+        <div class="link text-center mt-3">
+            <p>User? <a href="{{ url_for('user_login') }}">Login here</a></p>
+        </div>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        const container = document.querySelector('.container-sm');
+        container.style.opacity = '0';
+    
+        setTimeout(() => {
+            container.style.transition = 'opacity 0.5s ease';
+            container.style.opacity = '1';
+        }, 500);
+    </script>  
+</body>
+</html>

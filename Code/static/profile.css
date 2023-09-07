@@ -1,0 +1,147 @@
+/* General Styling */
+
+body {
+  background-image: url('/static/background/bg-profile.avif');
+  background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+.container-fluid {
+  padding: 15px;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 20px;
+  color: rgb(0, 55, 103);
+  text-align: center;
+}
+
+p {
+  color: #000000;
+}
+
+/* Navbar Styling */
+
+a img {
+  height: 50px;
+  width: 50px;
+  margin-right: 20px;
+}
+
+.button {
+  margin-bottom: 50px;
+}
+
+.link {
+  margin-right: 20px;
+  color: azure;
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.navbar-nav {
+  flex-direction: row;
+  align-items: center;
+}
+
+.nav-right-login {
+  position: absolute;
+  right: 50px;
+}
+
+.nav-right-cart {
+  position: absolute;
+  right: 150px;
+}
+
+.nav-profile {
+  position: absolute;
+  right: 220px;
+}
+
+.nav-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Categories Styling */
+
+.cat-item {
+  border-radius: 8px;
+  background-color: #f8f9fa;
+}
+
+.cat-item p {
+  margin-bottom: 10px;
+  color: #888;
+}
+
+.cat-item a {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.cat-item h5 {
+  margin: 0;
+  color: #333;
+}
+
+/* Featured Styling */
+
+.d-flex.align-items-center.border {
+  border-radius: 8px;
+  background-color: #f8f9fa;
+}
+
+/* Footer Styling */
+
+footer {
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  position: fixed;
+  width: 100%;
+  background-color: #000000;
+  text-align: center;
+}
+
+footer p {
+  font-size: 14px;
+  color: #fff;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #000000;
+  text-decoration: underline;
+}

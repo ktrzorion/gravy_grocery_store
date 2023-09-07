@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gravy - About Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='about_us.css')}}">
+</head>
+
+<body>
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg" style="background-color: rgb(0, 0, 0);">
+        <a class="navbar-brand" href="{{url_for('home')}}"><img src="/static/Logo/red-nbg.png" alt="Logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="link" href="{{url_for('home')}}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="link" href="mailto:ktrzorion@gmail.com">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="link" href="{{url_for('about_us')}}">About Us</a>
+                </li>
+            </ul>
+            <form class="form-inline nav-form" action="{{url_for('search')}}">
+                <input class="form-control mr-sm-2 inline" name="query" type="search" placeholder="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0 ml-5" type="submit">Search</button>
+            </form>
+            <ul class="navbar-nav">
+                <li class="nav-item nav-profile">
+                    <a class="nav-link" href="{{url_for('user_profile')}}"><b>PROFILE</b></a>
+                </li>
+                <li class="nav-item nav-right-cart">
+                    <a class="nav-link" href="{{url_for('cart')}}"><b>CART</b></a>
+                </li>
+                <li class="nav-item nav-right-login">
+                    <form action="{{url_for('logout')}}">
+                        <a href="{{url_for('user_login')}}" class="ml-2 btn-nav"><button
+                                class="btn btn-warning">Logout</button></a>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Navbar Ends -->
+
+    <h1>About Us</h1>
+
+    <div class="data">
+        <h3>Developer Name: Priyanshu Katiyar</h3>
+        <h3>LinkedIn Url: <a href="https://www.linkedin.com/in/priyanshuktr/">Click Here</a></h3>
+        <h3>GitHub Url: <a href="https://github.com/ktrzorion">Click Here</a></h3>
+        <h3>Email Me: <a href="mailto:ktrzorion@gmail.com">@zorion</a></h3>
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer class="text-white-50">
+        <p>&copy; 2022-2023 Gravy &nbsp;<a href="{{url_for('user_register')}}" class="text-white">REGISTER</a>,
+            Developed by <a href="https://www.linkedin.com/in/priyanshuktr/" class="text-white">OWNER INFO.</a>.</p>
+    </footer>
+
+</body>
+
+</html>

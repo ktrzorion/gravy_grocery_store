@@ -1,0 +1,113 @@
+summary_api:
+  description: Summary of last week's Product and Category Sales
+  endpoint: /api/summary
+  method: GET
+  response:
+    - status: 200
+      description: Successful response
+      content:
+        application/json:
+          example: |
+            {
+              "category_summary": [
+                {
+                  "category_name": "Fruits / Fal",
+                  "product_sales": [
+                    {
+                      "product_name": "Mango / Aam",
+                      "total_quantity": 4
+                    },
+                    {
+                      "product_name": "Strawberries",
+                      "total_quantity": 3
+                    }
+                  ]
+                },
+                {
+                  "category_name": "Utensil",
+                  "product_sales": [
+                    {
+                      "product_name": "Cooker 5Lt",
+                      "total_quantity": 4
+                    },
+                    {
+                      "product_name": "Spoon - Set of 10",
+                      "total_quantity": 4
+                    }
+                  ]
+                },
+                {
+                  "category_name": "Juices",
+                  "product_sales": [
+                    {
+                      "product_name": "Apple Juice -1lt",
+                      "total_quantity": 2
+                    },
+                    {
+                      "product_name": "Fruit Juice 0.95lt",
+                      "total_quantity": 2
+                    }
+                  ]
+                },
+                {
+                  "category_name": "Vegetable / Sabji",
+                  "product_sales": [
+                    {
+                      "product_name": "Potato",
+                      "total_quantity": 9
+                    },
+                    {
+                      "product_name": "Ladyfinger",
+                      "total_quantity": 5
+                    }
+                  ]
+                },
+                {
+                  "category_name": "Chocolate",
+                  "product_sales": [
+                    {
+                      "product_name": "Milkybar",
+                      "total_quantity": 3
+                    }
+                  ]
+                }
+              ],
+              "product_summary": [
+                {
+                  "product_name": "Mango / Aam",
+                  "total_quantity": 4
+                },
+                {
+                  "product_name": "Cooker 5Lt",
+                  "total_quantity": 4
+                },
+                {
+                  "product_name": "Apple Juice -1lt",
+                  "total_quantity": 2
+                },
+                {
+                  "product_name": "Fruit Juice 0.95lt",
+                  "total_quantity": 2
+                },
+                {
+                  "product_name": "Potato",
+                  "total_quantity": 9
+                },
+                {
+                  "product_name": "Ladyfinger",
+                  "total_quantity": 5
+                },
+                {
+                  "product_name": "Strawberries",
+                  "total_quantity": 3
+                },
+                {
+                  "product_name": "Milkybar",
+                  "total_quantity": 3
+                },
+                {
+                  "product_name": "Spoon - Set of 10",
+                  "total_quantity": 4
+                }
+              ]
+            }

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gravy - User Register</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='register.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container-sm">
+        <h2 class="text-center mt-4">User Registration</h2>
+
+        <form action="" method="POST" class="mt-4">
+            {{ form.hidden_tag() }}
+
+            <div class="form-group">
+                <label for="username">Username</label>
+                {{ form.username(class="form-control", placeholder="Enter your username") }}
+                {% for error in form.username.errors %}
+                <small class="text-danger">{{ error }}</small>
+                {% endfor %}
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                {{ form.password(class="form-control", placeholder="Enter your password") }}
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="f_name">First Name</label>
+                    {{ form.f_name(class="form-control", placeholder="Enter First Name")}}
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="l_name">Last Name</label>
+                    {{ form.l_name(class="form-control", placeholder="Enter Last Name")}}
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="email">Email</label>
+                    {{ form.email(class="form-control", placeholder="Enter Email")}}
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="house_no">House Number</label>
+                    {{ form.house_no(class="form-control", placeholder="Enter House Number")}}
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="society">Society / Sector</label>
+                    {{ form.society(class="form-control", placeholder="Enter Society Name")}}
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="pincode">Pincode</label>
+                    {{ form.pincode(class="form-control", placeholder="Enter Postal Code")}}
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="state">State</label>
+                {{ form.state(class="form-control", placeholder="Enter State")}}
+            </div>
+
+            <div class="text-center">
+                {{ form.submit(class="btn btn-primary") }}
+            </div>
+        </form>
+
+        <div class="text-center mt-3">
+            <p>Already a user? <a href="{{ url_for('user_login') }}">Sign In</a></p>
+        </div>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        const container = document.querySelector('.container-sm');
+        container.style.opacity = '0';
+
+        setTimeout(() => {
+            container.style.transition = 'opacity 0.5s ease';
+            container.style.opacity = '1';
+        }, 500);
+    </script>
+</body>
+
+</html>
